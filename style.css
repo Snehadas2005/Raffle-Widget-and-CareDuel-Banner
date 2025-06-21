@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 30px;
+    min-height: 100vh;
+}
+
+.main-content {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+}
+
+.hero-section {
+    text-align: center;
+    padding: 40px 0;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    border-radius: 12px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.hero-section p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.careduel-banner {
+    background: #f8f9fa;
+    border: 3px solid #E91E63;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 25px 0;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.1);
+}
+
+.careduel-banner:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(233, 30, 99, 0.2);
+}
+
+.careduel-banner a {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    color: #E91E63;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.careduel-banner a:hover {
+    text-decoration: underline;
+    background: rgba(233, 30, 99, 0.05);
+    transform: scale(1.02);
+}
+
+.stories-content {
+    padding: 30px 0;
+}
+
+.stories-content h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.story-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 4px solid #667eea;
+    transition: transform 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateX(5px);
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.raffle-widget {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    position: sticky;
+    top: 20px;
+}
+
+.raffle-widget h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.ticket-display {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.ticket-count {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.ticket-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.raffle-button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(245, 87, 108, 0.3);
+}
+
+.raffle-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(245, 87, 108, 0.4);
+}
+
+.raffle-button:active {
+    transform: translateY(0);
+}
+
+.raffle-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.error-message {
+    color: #e74c3c;
+    background: #ffe6e6;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+    border: 1px solid #e74c3c;
+}
+
+.success-message {
+    color: #27ae60;
+    background: #e8f5e8;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+    border: 1px solid #27ae60;
+}
+
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #fff;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.nav-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    background: rgba(255,255,255,0.1);
+    padding: 5px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.nav-tab {
+    flex: 1;
+    padding: 12px 20px;
+    background: transparent;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-tab.active {
+    background: white;
+    color: #333;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.nav-tab:hover:not(.active) {
+    background: rgba(255,255,255,0.1);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .ticket-count {
+        font-size: 2rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.raffle-widget, .main-content {
+    animation: fadeInUp 0.6s ease-out;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raffle Widget & CareDuel Banner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <main class="main-content">
+            <nav class="nav-tabs">
+                <button class="nav-tab active" onclick="switchTab('home')">Home</button>
+                <button class="nav-tab" onclick="switchTab('stories')">Stories</button>
+            </nav>
+
+            <div id="home-content" class="tab-content active">
+                <section class="hero-section">
+                    <h1>Welcome to Our Platform</h1>
+                    <p>Discover amazing stories and join our community raffle!</p>
+                </section>
+
+                <div class="careduel-banner">
+                    <a href="https://careduel.com/topic-of-the-week" target="_blank">
+                        🏆 Topic of the Week - Join the Discussion!
+                    </a>
+                </div>
+
+                <div class="stories-content">
+                    <h2>Featured Content</h2>
+                    <div class="story-card">
+                        <h3>Community Highlights</h3>
+                        <p>Join our vibrant community and participate in weekly discussions. Share your thoughts and connect with like-minded individuals.</p>
+                    </div>
+                    <div class="story-card">
+                        <h3>Weekly Raffle</h3>
+                        <p>Don't forget to enter our weekly raffle! Check the sidebar to see your current ticket count and join the excitement.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="stories-content" class="tab-content">
+                <section class="stories-content">
+                    <h2>Stories</h2>
+                    <div class="story-card">
+                        <h3>The Art of Storytelling</h3>
+                        <p>Discover the power of narrative and how stories shape our understanding of the world around us.</p>
+                    </div>
+                    <div class="story-card">
+                        <h3>Community Tales</h3>
+                        <p>Read inspiring stories from our community members and learn about their unique experiences.</p>
+                    </div>
+                    <div class="story-card">
+                        <h3>Behind the Scenes</h3>
+                        <p>Get an exclusive look at how our platform brings people together through the power of storytelling.</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <div class="raffle-widget">
+                <h3>🎫 Weekly Raffle</h3>
+                <div class="ticket-display">
+                    <div class="ticket-count" id="ticketCount">-</div>
+                    <div class="ticket-label">Tickets</div>
+                </div>
+                <button class="raffle-button" id="raffleButton" onclick="joinRaffle()">
+                    Join the Raffle
+                </button>
+                <div id="messageContainer"></div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
